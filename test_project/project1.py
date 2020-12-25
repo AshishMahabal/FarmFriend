@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import altair as alt
 
 st.title("Farm Friend - Indian Produce (2011-2018")
-st.subheader("An aid to data driven farming")
+st.subheader("An aid to data driven farming (in development)")
 
 "Data from http://mospi.nic.in/download-reports. "\
 "Make selections from the sidebar to view."
