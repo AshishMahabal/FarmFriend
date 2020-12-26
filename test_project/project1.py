@@ -8,7 +8,7 @@ st.title("Farm Friend - Indian Produce (2011-2018")
 st.subheader("An aid to data driven farming (in development)")
 
 "Data from http://mospi.nic.in/download-reports. "\
-"Make selections from the sidebar to view."
+"Make selections from the sidebar to view (arrow/triangle on top-left for mobiles)."
 
 cereals = ['cereals', 'paddy', 'wheat', 'jowar', 'bajra', 'barley', 'maize',
        'ragi', 'small millets', 'other cereals', 'pulses', 'gram',
@@ -64,6 +64,14 @@ if st.sidebar.checkbox('Show Produce plot for regions'):
 	thisdata = df[(df['State/ UT']==region) & (df['item'].isin(cereals))][['item',year]]	
 	st.altair_chart(alt.Chart(thisdata).mark_bar().encode(x='item',y=year))
 	thisdata
+
+# On map
+
+df = pd.DataFrame(
+	np.random.randn(1000, 2) / [50, 50] + [20.38, 78.16],
+	columns=['lat', 'lon'])
+st.map(df)
+
 
 #df[(df['State/ UT']==region) & (df['item'].isin(cereals))][['item',year]]
 
