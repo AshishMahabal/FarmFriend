@@ -67,10 +67,10 @@ if st.sidebar.checkbox('Show Produce plot for regions'):
 
 # On map
 
-df = pd.DataFrame(
-	np.random.randn(1000, 2) / [50, 50] + [20.38, 78.16],
-	columns=['lat', 'lon'])
-st.map(df)
+# df = pd.DataFrame(
+# 	np.random.randn(1000, 2) / [50, 50] + [20.38, 78.16],
+# 	columns=['lat', 'lon'])
+# st.map(df)
 
 
 #df[(df['State/ UT']==region) & (df['item'].isin(cereals))][['item',year]]
